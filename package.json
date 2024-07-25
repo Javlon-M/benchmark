@@ -1,0 +1,29 @@
+{
+  "name": "benchmark-javlonbek",
+  "version": "1.1.8",
+  "description": "Benchmark for cpu ram time",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compilate": "tsc -p ./",
+    "mybench": "node dist/index.js"
+  },
+  "keywords": [
+    "benchmark",
+    "cpuUsage",
+    "memoryUsage",
+    "javlonbek"
+  ],
+  "author": "Mirzaabdullayev",
+  "bin": {
+    "mybench": "dist/index.js"
+  },
+  "devDependencies": {
+    "@types/node": "^18.7.18"
+  },
+  "dependencies": {
+    "cli-table": "^0.3.11"
+  },
+  "license": "ISC",
+  "preferGlobal": true
+}

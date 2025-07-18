@@ -14,7 +14,7 @@
     "memoryUsage",
     "javlonbek"
   ],
-  "author": "Mirzaabdullayev",
+  "author": "Mirzaabdullaev",
   "bin": {
     "mybench": "dist/index.js"
   },

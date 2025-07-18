@@ -16,6 +16,6 @@ function createArray(){
 
 module.exports = {
     iterationFor,
-    errorThrower,
+    // errorThrower,
     createArray
 }

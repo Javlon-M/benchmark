@@ -1,35 +1,77 @@
-# Инструкция Benchmark
+# JavaScript Performance Benchmark Tool
 
-1. Установите данный пакет, выполнив следующую команду в терминале:
+A lightweight, command-line performance benchmarking utility for JavaScript functions with statistical analysis and configurable test parameters.
 
+## 🚀 Quick Start
 
-        npm i benchmark-javlonbek
+```bash
+npm install benchmark-javlonbek
+```
 
-  
-2. Запустите тестирования ваших функции:
+```bash
+mybench p=path/to/test.js i=10000 r=3
+```
 
+## 📊 Usage
 
-        mybench p=path/to/test.js i=10000 r=3
+### Command Line Interface
+```bash
+mybench p=<path> i=<iterations> r=<runs>
+```
 
+**Parameters:**
+- `p` (path): Path to the JavaScript file containing functions to benchmark
+- `i` (iterations): Number of iterations per test run (default: 10000)
+- `r` (runs): Number of test runs for statistical accuracy (default: 3)
 
-_где, **p**(path) - путь к тестируемому файлу, **i**(iterations) - количество итерации для цикла for, **r**(runs) - количество прогонов_
+### Test File Format
 
-# Требование к формату экспорта тестируемых функции
-**path** - должен указать к JavaScript файлу. Файл должен экспортировать функции подлежащие тестированию в следующем формате:
+Your test file should export functions using CommonJS format:
 
-        function iterationFor(){
-            for(let i = 0; i<=100;i++){
-                const obj = Object.create({name: 'TOm'})
-            }
-        }
+```javascript
+function iterationFor() {
+    for (let i = 0; i <= 100; i++) {
+        const obj = Object.create({ name: 'Tom' });
+    }
+}
 
-        function createArray(){
-            const newArray = new Array(20)
-        }
+function createArray() {
+    const newArray = new Array(20);
+}
 
-        module.exports = {
-            iterationFor,
-            createArray
-        }
+module.exports = {
+    iterationFor,
+    createArray
+};
+```
+
+## 📈 Output
+
+The tool provides comprehensive performance metrics including:
+- Execution time per iteration
+- Statistical analysis across multiple runs
+- Performance comparison between functions
 
 ![Scheme](public/image/img.png)
+
+## 🔧 Features
+
+- **Statistical Accuracy**: Multiple test runs for reliable results
+- **Configurable Parameters**: Adjust iterations and runs based on your needs
+- **Easy Integration**: Simple CLI interface for quick performance testing
+- **Lightweight**: Minimal dependencies for fast installation
+
+## 💡 Use Cases
+
+- Performance optimization of JavaScript algorithms
+- A/B testing different implementation approaches
+- Continuous performance monitoring in development workflow
+- Educational tool for understanding JavaScript performance characteristics
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit issues and enhancement requests.
+
+## 📄 License
+
+MIT License - see LICENSE file for details.
